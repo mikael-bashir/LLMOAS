@@ -1,6 +1,11 @@
 /.history
-/.env
-/.node_modules
+**/.env
+/.node_modules/
+node_modules/
+**/node_modules/
+**/env/
 /.venv
+**/venv
+**/next
 fastMCP-POC/token.json
 fastMCP-POC/client_secret.json
