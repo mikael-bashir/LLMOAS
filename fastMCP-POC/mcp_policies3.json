@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "name": "mcp-agent-prototype-policy",
+  "description": "Policy for the prototype agent",
+  "default_effect": "deny",
+  "rules": [
+    {
+      "name": "unrestricted-listing",
+      "description": "Allow any user to view any tools",
+      "effect": "allow",
+      "principal_conditions": [],
+      "resource_conditions": [],
+      "actions": ["list"]
+    },
+    {
+      "name": "only-special-user-can-execute",
+      "description": "Only special user can execute a tool.",
+      "effect": "allow",
+      "principal_conditions": [
+        {
+          "path": "uri",
+          "operator": "equals",
+          "value": "user:102599527276730135187"
+        }
+      ],
+      "resource_conditions": [],
+      "actions": ["execute"]
+    }
+  ]
+}

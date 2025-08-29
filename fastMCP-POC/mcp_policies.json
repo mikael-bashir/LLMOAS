@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "name": "mcp-agent-prototype-policy",
+  "description": "Policy for the prototype agent",
+  "default_effect": "deny",
+  "rules": [
+    {
+      "name": "unrestricted-listing",
+      "description": "Allow any user to view any tools",
+      "effect": "allow",
+      "principal_conditions": [],
+      "resource_conditions": [],
+      "actions": ["list"]
+    }
+  ]
+}

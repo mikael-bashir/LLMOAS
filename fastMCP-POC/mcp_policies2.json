@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "name": "mcp-agent-prototype-policy",
+  "description": "Policy for the prototype agent",
+  "default_effect": "deny",
+  "rules": [
+    {
+      "name": "unrestricted-listing",
+      "description": "Allow all principals to list all tools, resources, and prompts",
+      "effect": "allow",
+      "principal_conditions": [],
+      "resource_conditions": [],
+      "actions": ["list"]
+    },
+    {
+      "name": "allow-admin-to-run-view-tool",
+      "description": "Only allow principals with the 'admin' role to execute the 'get_all_paths' tool.",
+      "effect": "allow",
+      "principal_conditions": [
+        {
+          "path": "attributes.permissions.role",
+          "operator": "equals",
+          "value": "admin"
+        }
+      ],
+      "resource_conditions": [
+        {
+          "path": "attributes.name",
+          "operator": "equals",
+          "value": "get_all_paths_api_general_v2_get_all_endpoints_get"
+        }
+      ],
+      "actions": ["execute"]
+    }
+  ]
+}

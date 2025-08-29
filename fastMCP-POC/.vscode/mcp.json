@@ -1,0 +1,20 @@
+{
+    "servers": {
+        "my-local-mcp-server": {
+            "type": "http",
+            "url": "http://localhost:8001/mcp/",
+            "headers": {
+                "Authorization": "Bearer ${input:jwt-token}",
+                "X-Agent-ID": "copilot"
+            }
+        }
+    },
+    "inputs": [
+        {
+            "id": "jwt-token",
+            "type": "promptString",
+            "description": "Enter JWT for local FastMCP server authentication",
+            "password": true
+        }
+    ]
+}
