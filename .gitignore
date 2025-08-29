@@ -2,3 +2,5 @@
 /.env
 /.node_modules
 /.venv
+fastMCP-POC/token.json
+fastMCP-POC/client_secret.json
