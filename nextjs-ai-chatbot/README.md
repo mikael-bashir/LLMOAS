@@ -40,4 +40,4 @@ This app's main functionality is the usage of FastMCP's custom client - this cli
 
 This app needs a better orchestrator - right now there is barely any.
 
-There is currently a bug which I found during the final presentation - it seems that tools are invoked multiple times (twice?), so sometimes, some prompts are responded too incorrectly, for example if you ask the bot to make an account, they will try to do it twice, once successfully, but the second time obviously unsuccessfully (since account already registered), so the bot will say your account is already registered, an incorrect response. This might be due to an incorrect api setup (multiple routes called when only one should be).
+There is currently a bug which I found during the final presentation - this is because the hypercorn/quart service is running in debugging/test mode. Simply disable this when hosting locally. 
