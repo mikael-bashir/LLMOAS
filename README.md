@@ -1,4 +1,4 @@
-# Infosys 1-month internship project (LLMOAS)
+# Infosys 30/7/25-1/9/25 internship project (LLMOAS)
 
 ## Project Structure Overview
 
